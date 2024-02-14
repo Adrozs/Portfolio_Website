@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./Images/Logos/Personal_Logo.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="nav-color-fade"></div>
+    <main class="container">
+
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo clickable"><img src="./Images/Logos/Personal_Logo.png"
+                    alt="Adrians Logo"></a>
+
+            <div class="nav-buttons">
+                <a href="index.html" class="active-page">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="resume.html">Resumé</a>
+                <a href="hireme.html" class="hire-me-button">Get in touch!</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <h1 class="my-name">Adrian Rozsahegyi</h1>
+            <h1 class="title">Webdeveloper</h1> <!--Make this "rolling" so it "turns" and switches phrases between a set of descriptive words about me-->
+        </header>
+        
+        <!--This section should contain some sort of parallax effect when scrolling. AN image at the top with a quote or
+        something that makes the user want to press the big CTA button that says "HIRE ME!" that takes them to the 
+        (hireme.html) page that has more information and what I can do and why to hire me
+        when scrolling down the paralax effect does something cool and then the stuff below fades in. important
+        all proffesional sites do this -->
+        <section class="introduction">
+            <div>
+                <div class="pic-and-text-container">
+                    <p> Hello, I'm <span class="highlight-purple">Adrian Rozsahegyi</span> — coming from the world of retail to the innovative realm of web development.
+                    <br> <br>With a knack for problem-solving and a passion for technology, I'm on a mission to create impactful digital
+                    solutions.
+                    </p>
+                
+                    <img src="./Images/Adrian/profile_picture.jpg" alt="Picture of Adrian">
+                </div>
+                
+                <a href="/hireme.html" class="button">Let's get in touch!</a>
+                <div class="divider"></div> <!--Added divider as a tag is absolute due to animations so section below clippes through it otherwise-->
+            </div>
+        </section>
+
+
+        <!--Input some dividing artwork or something perhaps?-->
+
+
+        <!--Section with portfolio - here's also the idea to show off some minor things and then a cta for the user
+        to go to (portfolio.html) where I show up some projects more in detail and write some more detailed info.
+        the section here in index however should be I'm thinking cards with images (perhaps like the html bootcamp thing)
+        but they should be horizontal or something and you should be able to "scroll" and click more info on it and it'll
+        take you to that location on the portfolio page (I think with using id you can make it like that) so it should
+        scroll down to that project on that page-->                                  
+        <section class="background-blue">
+            <h2 class="section-header-text">Recent work</h2>
+            <div class="card-container">
+                <!--Dreamify-->
+                <div class="card-object">
+                    <div class="card">
+                        <img src="/Images/Portfolio_images/Dreamify.jpg" alt="">
+                        <div class="card-content">
+                            <h2>Dreamify</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit ullam ea odio quidem illo quaerat dolor recusandae minus nemo aut sunt consequatur at officia rerum, voluptatum corrupti fugit aspernatur. Placeat omnis non deleniti. </p>
+                            <a href="#" class="button-more-info">Find out more
+                                <span class="material-symbols-outlined">
+                                    open_in_new
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--The Bank-->
+                <div class="card-object">
+                    <div class="card">
+                        <img src="/Images/Portfolio_images/The_Bank.jpg" alt="">
+                        <div class="card-content">
+                            <h2>"The Bank"</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit ullam ea odio quidem illo quaerat
+                                dolor recusandae minus nemo aut sunt consequatur at officia rerum, voluptatum corrupti fugit aspernatur.
+                                Placeat omnis non deleniti. </p>
+                            <a href="#" class="button-more-info">Find out more
+                                <span class="material-symbols-outlined">
+                                    open_in_new
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Console Warrior-->
+                <div class="card-object">
+                    <div class="card">
+                        <img src="/Images/Portfolio_images/ConsoleWarrior_Stylized.webp" alt="">
+                        <div class="card-content">
+                            <h2>Console Warrior</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit ullam ea odio quidem illo quaerat
+                                dolor recusandae minus nemo aut sunt consequatur at officia rerum, voluptatum corrupti fugit aspernatur.
+                                Placeat omnis non deleniti. </p>
+                            <a href="#" class="button-more-info">Find out more
+                                <span class="material-symbols-outlined">
+                                    open_in_new
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Console Blackjack-->
+                <div class="card-object">
+                    <div class="card">
+                        <img src="/Images/Portfolio_images/ConsoleBlackJack.jpg" alt="">
+                        <div class="card-content">
+                            <h2>Console Blackjack</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit ullam ea odio quidem illo quaerat
+                                dolor recusandae minus nemo aut sunt consequatur at officia rerum, voluptatum corrupti fugit aspernatur.
+                                Placeat omnis non deleniti. </p>
+                            <a href="#" class="button-more-info">Find out more
+                                <span class="material-symbols-outlined">
+                                    open_in_new
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Input some dividing artwork or something perhaps?-->
+        <div class="divider"></div>
+
+        <!--Section for CV - here it should just be a breif description of my work life and experience with a CTA button
+        that takes you to the (resume.html) page where it shows like my cv but in html/css. -->
+        <article>
+            <h2 class="section-header-text">Work experience</h2>
+            
+            <div class="work-experience-container">
+                <div class="section-split-right">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat facere expedita repellat, optio corporis nobis,
+                    fugit pariatur nemo sed aut accusamus aliquam sapiente qui nesciunt suscipit vel. Soluta, consequatur dolorum minus
+                    ducimus beatae a tenetur inventore nam culpa delectus alias quo enim, ipsum atque cupiditate? Dolores nemo ullam
+                    velit aperiam. Modi inventore, quod molestias magnam rem voluptas veniam aut illum cumque aliquid totam accusantium
+                    nisi minus delectus, rerum distinctio, veritatis adipisci placeat tenetur amet tempore voluptatem. Eum ad rerum, nam
+                    dignissimos cumque cum quidem corrupti quasi expedita molestiae animi deleniti vitae officiis aut libero error ab
+                    tempora, accusantium neque unde.</p>
+                </div>
+                
+                <div class="section-img-and-button-container">
+                    <img src="https://picsum.photos/600/350" alt="">
+                    <a href="#" class="section-button">More details</a>
+                </div>
+                
+            </div>
+
+        </article>
+        
+
+        <div class="divider"></div>
+
+        <!--Section about me - breif info and a CTA button (on the right perhaps) that takes user to a more detailed
+        page (about.html) with more info of me ask chat gpt for fledging out the text. have some images of me in 
+        various settings, work, personal life, to show off certificate (bc trainee), other work related events,
+        paddlingen when we were outdoors etc etc-->
+        <section>
+            <h2 class="section-header-text">Who is Adrian?</h2>
+            
+            <div class="about-me-container"></div>
+                <div class="about-me-img-and-button-container">
+                    <img src="https://picsum.photos/600/350" alt="">
+                    <a href="#" class="about-me-button">More details</a>
+                </div>
+            
+                <div class="about-me-p-container">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt id eaque eos? Dolorem labore possimus cupiditate aperiam ut, commodi molestias sequi aliquid. Ipsum accusamus quod a quam repellat totam nesciunt.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Put contact information, social media links and copyright information here-->
+        <footer>
+
+        </footer>
+        
+    </main>
+</body>
+
+</html>
