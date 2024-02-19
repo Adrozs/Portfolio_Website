@@ -7,13 +7,14 @@
     <title>My Personal Website</title>
     <link rel="stylesheet" href="general-style.css">
     <link rel="stylesheet" href="index-style.css">
+    <link rel="icon" type="image/x-icon" href="./Images/Logos/Personal_Logo.png">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
     <div class="nav-color-fade"></div>
-    <div class="container">
+    <main class="container">
 
         <nav class="navbar">
             <a href="index.html" class="nav-logo clickable"><img src="./Images/Logos/Personal_Logo.png"
@@ -28,10 +29,10 @@
             </div>
         </nav>
 
-        <div class="hero">
+        <header class="hero">
             <h1 class="my-name">Adrian Rozsahegyi</h1>
             <h1 class="title">Webdeveloper</h1> <!--Make this "rolling" so it "turns" and switches phrases between a set of descriptive words about me-->
-        </div>
+        </header>
         
         <!--This section should contain some sort of parallax effect when scrolling. AN image at the top with a quote or
         something that makes the user want to press the big CTA button that says "HIRE ME!" that takes them to the 
@@ -139,38 +140,60 @@
         <!--Input some dividing artwork or something perhaps?-->
         <div class="divider"></div>
 
-        <section>
+        <!--Section for CV - here it should just be a breif description of my work life and experience with a CTA button
+        that takes you to the (resume.html) page where it shows like my cv but in html/css. -->
+        <article>
             <h2 class="section-header-text">Work experience</h2>
             
             <div class="work-experience-container">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat facere expedita repellat, optio corporis nobis, fugit pariatur nemo sed aut accusamus aliquam sapiente qui nesciunt suscipit vel. Soluta, consequatur dolorum minus ducimus beatae a tenetur inventore nam culpa delectus alias quo enim, ipsum atque cupiditate? Dolores nemo ullam velit aperiam. Modi inventore, quod molestias magnam rem voluptas veniam aut illum cumque aliquid totam accusantium nisi minus delectus, rerum distinctio, veritatis adipisci placeat tenetur amet tempore voluptatem. Eum ad rerum, nam dignissimos cumque cum quidem corrupti quasi expedita molestiae animi deleniti vitae officiis aut libero error ab tempora, accusantium neque unde.</p>
+                <div class="section-split-right">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat facere expedita repellat, optio corporis nobis,
+                    fugit pariatur nemo sed aut accusamus aliquam sapiente qui nesciunt suscipit vel. Soluta, consequatur dolorum minus
+                    ducimus beatae a tenetur inventore nam culpa delectus alias quo enim, ipsum atque cupiditate? Dolores nemo ullam
+                    velit aperiam. Modi inventore, quod molestias magnam rem voluptas veniam aut illum cumque aliquid totam accusantium
+                    nisi minus delectus, rerum distinctio, veritatis adipisci placeat tenetur amet tempore voluptatem. Eum ad rerum, nam
+                    dignissimos cumque cum quidem corrupti quasi expedita molestiae animi deleniti vitae officiis aut libero error ab
+                    tempora, accusantium neque unde.</p>
+                </div>
+                
+                <div class="section-img-and-button-container">
+                    <img src="https://picsum.photos/600/350" alt="">
+                    <a href="#" class="section-button">More details</a>
+                </div>
+                
             </div>
-        </section>
+
+        </article>
         
 
+        <div class="divider"></div>
 
         <!--Section about me - breif info and a CTA button (on the right perhaps) that takes user to a more detailed
         page (about.html) with more info of me ask chat gpt for fledging out the text. have some images of me in 
         various settings, work, personal life, to show off certificate (bc trainee), other work related events,
         paddlingen when we were outdoors etc etc-->
         <section>
-            <div>
-                <p></p>
-            </div>
-
-
-        <!--Section for CV - here it should just be a breif description of my work life and experience with a CTA button
-        that takes you to the (resume.html) page where it shows like my cv but in html/css. -->
-        <section>
-            <div>
-                <p></p>
+            <h2 class="section-header-text">Who is Adrian?</h2>
+            
+            <div class="about-me-container"></div>
+                <div class="about-me-img-and-button-container">
+                    <img src="https://picsum.photos/600/350" alt="">
+                    <a href="#" class="about-me-button">More details</a>
+                </div>
+            
+                <div class="about-me-p-container">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt id eaque eos? Dolorem labore possimus cupiditate aperiam ut, commodi molestias sequi aliquid. Ipsum accusamus quod a quam repellat totam nesciunt.</p>
+                </div>
             </div>
         </section>
 
-        
 
+        <!--Put contact information, social media links and copyright information here-->
+        <footer>
+
+        </footer>
         
-    </div>
+    </main>
 </body>
 
 </html>
