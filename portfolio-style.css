@@ -26,11 +26,11 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding: 1rem;
-    border: 2px solid #40484b;
-    background-color: rgb(26, 29, 30); 
+    padding: 1rem;
+    /* border: 2px solid #899296;
+    color: #b4ebff;
     border-radius: 1.5vmin;*/
-}
+} 
 
 .portfolio-container img {
     max-width: 700px;
@@ -54,9 +54,9 @@ h2 {
     text-align: center;
     font-size: 2rem;
     padding: 15px;
-    background-color: #344a52;
+    background-color: #c2c4eb;
     border-radius: 3vmin;
-    color: #cee6f0;
+    color: #2b2e4d;
     margin: 0 10px
 }
 
@@ -72,9 +72,9 @@ h2 {
 }
 
 .tech-list  {
-    background-color: #414465;
-    border: 1px solid #c2c4eb;
-    color: #e0e0ff;
+    background-color: #b3cad4;
+    border: 1px solid #899296;
+    color: #1d333b;
     border-radius: 1vmin;
     padding: 1rem;
 }
@@ -99,8 +99,8 @@ h2 {
 }
 
 #button-github {
-    background-color: #004e5f;
-    color: #b4ebff;
+    background-color: #5ad5f9;
+    color: #003542;
 }
 
 .divider {
