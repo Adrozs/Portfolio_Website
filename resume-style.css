@@ -1,0 +1,29 @@
+h1 {
+    font-size: 9rem;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    color: #5ad5f9;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.content {
+    display: flex;
+}
+
+.left {
+    border: 2px solid salmon;
+    height: 500px;
+    width: 30%;
+}
+
+.right {
+    border: 2px solid skyblue;
+    height: 500px;
+    width: 70%;
+}
+
+.profile-img {
+    
+}
