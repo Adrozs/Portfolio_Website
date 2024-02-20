@@ -1,10 +1,44 @@
-h1 {
-    font-size: 9rem;
+.resume-header {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
     text-align: center;
-    margin-top: 10%;
-    margin-bottom: 15%;
-    color: #5ad5f9;
     font-family: 'Nunito Sans', sans-serif;
+    font-size: 70px;
+    color: #5ad5f9;
+}
+
+
+/*Education / Work experience*/
+h2 {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Workplace*/
+h3 {
+    font-size: 2rem;
+    color: #b3cad4;
+    padding-bottom: 0.3rem;
+}
+
+/*Job title*/
+h4 {
+    font-size: 1.5rem;
+    color: #5ad5f9;
+
+}
+
+/*Years*/
+h5 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding-bottom: 0.3rem;
+}
+
+p {
+    font-size: 1.15rem;
 }
 
 
@@ -13,16 +47,34 @@ h1 {
 }
 
 .left {
-    border: 2px solid salmon;
-    height: 500px;
+    /* border: 2px solid salmon; */
+    height: auto;
     width: 30%;
+    background-color: #344a52;
+    color: #cee6f0;
+    padding: 1rem;
 }
 
 .right {
-    border: 2px solid skyblue;
-    height: 500px;
+    /* border: 2px solid skyblue; */
+    height: auto;
     width: 70%;
+    background-color: #004e5f;
+    color: #b4ebff;
+    padding: 1rem;
 }
+
+.workplace-container {
+    padding-bottom: 1rem;
+}
+
+.title-and-year-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 
 /* .profile-img {
     

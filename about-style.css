@@ -1,0 +1,58 @@
+.about-me-header {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 70px;
+    color: #5ad5f9;
+}
+
+.reverse-flex {
+    flex-direction: row-reverse;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+}
+
+.img-column {
+    flex-direction: column;
+}
+
+.img-column img {
+    height: auto;
+    width: 500px;
+    border-radius: 3vmin;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.text-column {
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 5%;
+    /* border: 2px solid aqua; */
+    background-color: #004e5f;
+    color: #b4ebff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.border-right-bottom {
+    border-top-right-radius: 5vmin;
+    border-bottom-right-radius: 15vmin;
+}
+
+.border-right-top {
+    border-top-right-radius: 15vmin;
+    border-bottom-right-radius: 5vmin;
+}
+
+.border-left-bottom {
+    border-top-left-radius: 5vmin;
+    border-bottom-left-radius: 15vmin;
+}
+
+.border-left-top {
+    border-top-left-radius: 15vmin;
+    border-bottom-left-radius: 5vmin;
+}
