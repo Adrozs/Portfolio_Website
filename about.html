@@ -4,82 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Adrian Rozsahegyi | About</title>
     <link rel="stylesheet" href="general-style.css">
     <link rel="stylesheet" href="about-style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="./script.js"></script>
 </head>
 
 <body>
     <div class="nav-color-fade"></div>
-    <div class="container">
-        <nav class="navbar">
-            <a href="index.html" class="nav-logo clickable"><img src="./Images/Logos/Personal_Logo.png"
-                    alt="Adrians Logo"></a>
-
-            <div class="nav-buttons">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active-page">About</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="resume.html">Resumé</a>
-                <a href="hireme.html" class="hire-me-button">Get in touch!</a>
-            </div>
-        </nav>
-
-        <!--Content goes here-->
-        <h1 class="about-me-header">About me</h1>
+    <section class="container">
+        <section class="navbar">
+            <a href="./index.html" id="logo"> <img src="./Images/Logos/Personal_Logo.png" alt=""Logo></a>
+            <nav>
+                <input type="checkbox" id="nav-toggle">
+                <ul class="nav-menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html" class="active-page">About</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./resume.html">Resumé</a></li>
+                    <li><a href="./hireme.html" id="hire-me-button">Get in touch!</a></li>
+                </ul>
+            </nav>
+            <span class="material-symbols-outlined" id="theme-toggle">light_mode</span>
         
+            <!--Spacer to make sure nav-menu is centered and image at the far left-->
+            <div class="navbar-spacer"></div>
         
-        <section class="info-container">
-            <div class="img-column"> <img src="./Images/Adrian/adrian2.png" alt=""></div>
-            <div class="text-column border-right-top">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae atque velit praesentium tempora.
-                    Eligendi nisi sit harum doloribus assumenda repellendus sunt dolorem quis eius eum molestias corporis ipsa
-                    sint nam facilis culpa ipsum aliquam nemo earum minima nulla modi, ratione quae! Cum nisi aliquid quis autem
-                    ipsam praesentium, ratione veniam.
-                </p>
+            <div class="hamburger-menu">
+                <label for="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
             </div>
+        
         </section>
 
-        <section class="info-container reverse-flex">
-            <div class="img-column"> <img src="./Images/Adrian/leadership_diploma.jpg" alt=""></div>
-            <div class="text-column border-left-bottom">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae atque velit praesentium tempora.
-                    Eligendi nisi sit harum doloribus assumenda repellendus sunt dolorem quis eius eum molestias corporis ipsa
-                    sint nam facilis culpa ipsum aliquam nemo earum minima nulla modi, ratione quae! Cum nisi aliquid quis autem
-                    ipsam praesentium, ratione veniam.
-                </p>
-            </div>
-        </section>
 
-        <section class="info-container">
-            <div class="img-column"> <img src="./Images/Adrian/adrian3.png" alt=""></div>
-            <div class="text-column border-right-top">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae atque velit praesentium tempora.
-                    Eligendi nisi sit harum doloribus assumenda repellendus sunt dolorem quis eius eum molestias corporis ipsa
-                    sint nam facilis culpa ipsum aliquam nemo earum minima nulla modi, ratione quae! Cum nisi aliquid quis autem
-                    ipsam praesentium, ratione veniam.
-                </p>
-            </div>
-        </section>
 
-                <section class="info-container reverse-flex">
-                    <div class="img-column"> <img src="./Images/Adrian/adrian4.png" alt=""></div>
-                    <div class="text-column border-left-bottom">
+        <header><h1 class="about-me-header">About me</h1></header>
+        
+        <main>
+            <section class="about-container">
+                <section class="info-container">
+                    <div class="img-column"> <img class="hoverable" src="./Images/Adrian/adrian2.png" alt="Picture of Adrian"></div>
+                    <article class="text-column border-right-top">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae atque velit praesentium tempora.
                             Eligendi nisi sit harum doloribus assumenda repellendus sunt dolorem quis eius eum molestias corporis ipsa
                             sint nam facilis culpa ipsum aliquam nemo earum minima nulla modi, ratione quae! Cum nisi aliquid quis autem
                             ipsam praesentium, ratione veniam.
                         </p>
-                    </div>
+                    </article>
                 </section>
 
-    </div>
+                <section class="info-container reverse-flex">
+                    <div class="img-column"> <img class="hoverable" src="./Images/Adrian/leadership_diploma.jpg" alt="Picture of Adrian"></div>
+                    <article class="text-column border-left-bottom">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae atque velit praesentium tempora.
+                            Eligendi nisi sit harum doloribus assumenda repellendus sunt dolorem quis eius eum molestias corporis ipsa
+                            sint nam facilis culpa ipsum aliquam nemo earum minima nulla modi, ratione quae! Cum nisi aliquid quis autem
+                            ipsam praesentium, ratione veniam.
+                        </p>
+                    </article>
+                </section>
+
+                <section class="info-container">
+                    <div class="img-column"> <img class="hoverable" src="./Images/Adrian/adrian3.png" alt="Picture of Adrian"></div>
+                    <article class="text-column border-right-top">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae atque velit praesentium tempora.
+                            Eligendi nisi sit harum doloribus assumenda repellendus sunt dolorem quis eius eum molestias corporis ipsa
+                            sint nam facilis culpa ipsum aliquam nemo earum minima nulla modi, ratione quae! Cum nisi aliquid quis autem
+                            ipsam praesentium, ratione veniam.
+                        </p>
+                    </article>
+                </section>
+
+                <section class="info-container reverse-flex">
+                    <div class="img-column"> <img class="hoverable" src="./Images/Adrian/adrian4.png" alt="Picture of Adrian"></div>
+                    <article class="text-column border-left-bottom">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae atque velit praesentium tempora.
+                            Eligendi nisi sit harum doloribus assumenda repellendus sunt dolorem quis eius eum molestias corporis ipsa
+                            sint nam facilis culpa ipsum aliquam nemo earum minima nulla modi, ratione quae! Cum nisi aliquid quis autem
+                            ipsam praesentium, ratione veniam.
+                        </p>
+                    </article>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <section class="img-links-container">
+                <div class="img-button-container">
+                    <img id="footer-logo" src="./Images/Logos/Personal_Logo.png" alt="Logo">
+                    <a href="/hireme.html" class="btn">Contact me</a>
+                </div>
+
+                <ul>
+                    <a href="https://github.com/Adrozs" target="_blank" class="social-link"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/adrozs/" target="_blank" class="social-link"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="mailto:adrozsahegyi@gmail.com" target="_blank" class="social-link"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </ul>
+            </section>
+        
+            <p id="copyright-text">© Copyright 2024 Adrian Rozsahegyi. All rights reserved.</p>
+        </footer>
+    </section>
 </body>
 
 </html>

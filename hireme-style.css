@@ -1,0 +1,126 @@
+/*Colors*/
+:root {
+    --background-color: #191c1d;
+    --on-background-color: #e1e3e4;
+
+    --surface--color: #40484b;
+    --on-surface--color: #bfc8cc;
+
+    --outline-color: #899296;
+
+    --navbar-color: #1d333b;
+
+    --primary-color: #5ad5f9;
+    --on-primary-color: #003542;
+    --primary-container-color: #004e5f;
+    --on-primary-container-color: #b4ebff;
+
+    --secondary-color: #b3cad4;
+    --on-secondary-color: #1d333b;
+    --secondary-container-color: #344a52;
+    --on-secondary-container-color: #cee6f0;
+    --secondary-highlight-color: #cee6f0;
+
+    --teritary-color: #c2c4eb;
+    --on-teritary-color: #2b2e4d;
+    --teritary-container-color: #414465;
+    --on-teritary-container-color: #e0e0ff;
+    --teritary-highlight-container-color: #e4e4ff;
+}
+
+.active-page-alt {
+    background-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: none !important;
+    color: var(--primary-color) !important;
+    border-radius: 0 !important;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+h1 {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 5rem;
+    color: var(--primary-color);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
+    width: 30%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.socials a {
+    font-size: 3rem;
+    padding: 0.25rem 0.5rem;
+    color: var(--primary-color);
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+}
+
+.socials a:active {
+    scale: 0.94;
+    color: var(--on-primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 70%;
+}
+
+input,textarea {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem;
+    border-radius: 1.5vmin;
+    font-family: 'Roboto Mono', monospace;
+}
+
+input::placeholder,textarea::placeholder {
+    color: var(--on-secondary-color);
+}
+
+#submit {
+    background-color: var(--primary-color) !important;
+    color: var(--on-primary-color);
+}
+
+@media (max-width: 610px) {
+    h1 {
+        font-size: 3rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .socials {
+    margin-bottom: 0.2rem;
+    }
+
+    .socials a {
+        font-size: 2rem;
+    }
+
+    input, textarea {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        margin: 0.3rem;
+    }
+}

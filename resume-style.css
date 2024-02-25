@@ -1,10 +1,38 @@
+:root {
+    /*Colors*/
+    --background-color: #191c1d;
+    --on-background-color: #e1e3e4;
+
+    --surface--color: #40484b;
+    --on-surface--color: #bfc8cc;
+
+    --outline-color: #899296;
+
+    --primary-color: #5ad5f9;
+    --on-primary-color: #003542;
+    --primary-container-color: #004e5f;
+    --on-primary-container-color: #b4ebff;
+
+    --secondary-color: #b3cad4;
+    --on-secondary-color: #1d333b;
+    --secondary-container-color: #344a52;
+    --on-secondary-container-color: #cee6f0;
+    --secondary-highlight-color: #cee6f0;
+
+    --teritary-color: #c2c4eb;
+    --on-teritary-color: #2b2e4d;
+    --teritary-container-color: #414465;
+    --on-teritary-container-color: #e0e0ff;
+    --teritary-highlight-container-color: #e4e4ff;
+}
+
 .resume-header {
     margin-top: 5rem;
     margin-bottom: 8rem;
     text-align: center;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 70px;
-    color: #5ad5f9;
+    font-size: 5rem;
+    color: var(--primary-color);
 }
 
 
@@ -18,14 +46,14 @@ h2 {
 /*Workplace*/
 h3 {
     font-size: 2rem;
-    color: #b3cad4;
+    color: var(--secondary-color);
     padding-bottom: 0.3rem;
 }
 
 /*Job title*/
 h4 {
     font-size: 1.5rem;
-    color: #5ad5f9;
+    color: var(--primary-color);
 
 }
 
@@ -44,28 +72,42 @@ p {
 
 .content {
     display: flex;
+    border-radius: 3vmin;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
 }
 
-.left {
+.education {
     /* border: 2px solid salmon; */
     height: auto;
-    width: 30%;
-    background-color: #344a52;
-    color: #cee6f0;
+    width: 35%;
+    background-color: var(--secondary-container-color);
+    color: var(--on-secondary-container-color);
     padding: 1rem;
 }
 
-.right {
+.education h4 {
+    color: var(--on-background-color);
+}
+
+.education h3 {
+    color: var(--primary-color);
+}
+
+.work {
     /* border: 2px solid skyblue; */
+    display: flex;
+    flex-direction: column;
     height: auto;
     width: 70%;
-    background-color: #004e5f;
-    color: #b4ebff;
+    background-color: var(--primary-container-color);
+    color: var(--on-primary-container-color);
     padding: 1rem;
 }
 
-.workplace-container {
-    padding-bottom: 1rem;
+.info-container {
+    padding-bottom: 2rem;
 }
 
 .title-and-year-container {
@@ -75,7 +117,76 @@ p {
     align-items: baseline;
 }
 
+.work a {  
+    align-self: center;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+}
 
-/* .profile-img {
-    
-} */
+/*Responsitivity*/
+@media (max-width: 980px) {
+    html {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 1rem;
+    }
+
+    .resume-header {
+    font-size: 3rem;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .work {
+        width: 100%;
+    }
+
+    .education {
+        width: 100%;
+    }
+
+    .title-and-year-container {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    .work a {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    footer .img-links-container .img-button-container .btn {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    footer .social-link {
+        font-size: 1.8rem;
+    }
+
+    #copyright-text {
+        font-size: 0.7rem;
+    }
+}
+
+@media print {
+    h1, .work a {
+        display: none;
+    }
+
+    .work {
+        height: 95vh;
+    }
+}

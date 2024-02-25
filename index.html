@@ -4,212 +4,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Adrian Rozsahegyi | Webdeveloper</title>
     <link rel="stylesheet" href="general-style.css">
     <link rel="stylesheet" href="index-style.css">
     <link rel="icon" type="image/x-icon" href="./Images/Logos/Personal_Logo.png">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/path/to/print.css" media="print" rel="stylesheet" />
+    <script defer src="script.js"></script>
 </head>
 
 <body>
     <div class="nav-color-fade"></div>
-    <main class="container">
+    <section class="container">
+            <section class="navbar">
+                <a href="./index.html" id="logo"> <img src="./Images/Logos/Personal_Logo.png" alt="Logo"></a>
+                <nav>
+                    <input type="checkbox" id="nav-toggle">
+                    <ul class="nav-menu">
+                        <li><a href="./index.html" class="active-page">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
+                        <li><a href="./resume.html">Resumé</a></li>
+                        <li><a href="./hireme.html" id="hire-me-button">Get in touch!</a></li>
+                    </ul>
+                </nav>
+                <span class="material-symbols-outlined" id="theme-toggle">light_mode</span>
 
-        <nav class="navbar">
-            <a href="index.html" class="nav-logo clickable"><img src="./Images/Logos/Personal_Logo.png"
-                    alt="Adrians Logo"></a>
-
-            <div class="nav-buttons">
-                <a href="index.html" class="active-page">Home</a>
-                <a href="about.html">About</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="resume.html">Resumé</a>
-                <a href="hireme.html" class="hire-me-button">Get in touch!</a>
-            </div> 
-        </nav>
-
-        <header class="hero">
-            <div class="my-name">Adrian Rozsahegyi,</div>
+                <!--Spacer to make sure nav-menu is centered and image at the far left-->
+                <div class="navbar-spacer"></div> 
             
-            <!--Make this "rolling" so it "turns" and switches phrases between a set of descriptive words about me-->
-            <div class="animation-container">
-                <ul>
-                    <li class="title">Webdeveloper</li>
-                    <li class="title">Video gamer</li>
-                    <li class="title">Cat lover</li>
-                    <li class="title">Hates cooking</li>
-                    <li class="title">Coffee with milk</li>
-                    <li class="title">Caffeine addict</li>
-                    <li class="title">PS5 fanboy</li>
-                    <li class="title">Testttt</li>
-                    <li class="title">Webdeveloper</li>
-                </ul>
-            </div>
-        </header>
+                <div class="hamburger-menu">
+                    <label for="nav-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                </div>
+            
+            </section>
 
-        <div class="divider"></div>
-        
-        <!--This section should contain some sort of parallax effect when scrolling. AN image at the top with a quote or
-        something that makes the user want to press the big CTA button that says "HIRE ME!" that takes them to the 
-        (hireme.html) page that has more information and what I can do and why to hire me
-        when scrolling down the paralax effect does something cool and then the stuff below fades in. important
-        all proffesional sites do this -->
-        <section class="introduction">
-            <div>
-                <div class="pic-and-text-container">
-                    <p> Hello, I'm <span class="highlight-purple">Adrian Rozsahegyi</span> — coming from the world of retail to the innovative realm of web development.
-                    <br> <br>With a knack for problem-solving and a passion for technology, I'm on a mission to create impactful digital
-                    solutions.
+            <div class="divider"></div>
+
+            <header class="hero">
+                <div class="my-name">Adrian Rozsahegyi,</div>
+                
+                <div class="animation-container">
+                    <ul>
+                        <li class="title">Webdeveloper</li>
+                        <li class="title">Harry Potter fan</li>
+                        <li class="title">Cat person</li>
+                        <li class="title">Loves Creepypodden</li>
+                        <li class="title">Collected bottlecaps</li>
+                        <li class="title">Caffeine addict</li>
+                        <li class="title">Likes Punk-pop music</li>
+                        <li class="title">Webdeveloper</li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="divider"></div>
+
+        <main>
+            <section class="introduction">
+                    <section class="pic-and-text-container">
+                    <div class="text-button-container">
+                            <p> Hello, I'm <span class="highlight-purple">Adrian Rozsahegyi</span> — coming from the world of retail to the innovative realm of web development.
+                            <br> <br>With a knack for problem-solving and a passion for technology, I'm on a mission to create impactful digital
+                            solutions.
+                            </p>
+                            <a href="/hireme.html" class="btn"> Let's get in touch!</a>
+                        </div>
+                    
+                        <img src="./Images/Adrian/profile_picture.jpg" alt="Picture of Adrian">
+                    </section>
+            </section>
+
+            <div class="divider"></div>
+
+
+
+            <!--Input some dividing artwork or something perhaps?-->
+
+            <section class="card-section">
+                <h2 class="section-header-text">Recent work</h2>
+                <div class="card-container">
+                    <!--Dreamify-->
+                    <div class="card-object">
+                        <div class="card">
+                            <img src="./Images/Portfolio_images/Dreamify.jpg" alt="Dreamify">
+                            <div class="card-content">
+                                <h2>Dreamify</h2>
+                                <p>A C#/.NET console app consiting of a client and an own built API that interracts with the Spotify API as an external API
+                                along with database connections and testing.
+                                Allowing the user to create a user profile and connect son...
+                            </p>
+                                <a href="/portfolio.html#portfolio-dreamify" class="button-more-info">Find out more
+                                    <span class="material-symbols-outlined">
+                                        open_in_new
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--The Bank-->
+                    <div class="card-object">
+                        <div class="card">
+                            <img src="./Images/Portfolio_images/The_Bank.jpg" alt="The Bank">
+                            <div class="card-content">
+                                <h2>"The Bank"</h2>
+                                <p>A bank Console-app with Database connections made in C#/.NET.
+                                
+                                This C# console application simulates basic bank/atm functionalities. Users can log in to their accounts, view account
+                                details, create new accou...</p>
+                                <a href="/portfolio.html#portfolio-bank" class="button-more-info">Find out more
+                                    <span class="material-symbols-outlined">
+                                        open_in_new
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Console Warrior-->
+                    <div class="card-object">
+                        <div class="card">
+                            <img src="./Images/Portfolio_images/ConsoleWarrior_Stylized.webp" alt="Console Warrior">
+                            <div class="card-content">
+                                <h2>Console Warrior</h2>
+                                <p>A little side project I started in the beginning of my programming journey to work on incorporating the knowledge I
+                                gained so far since I started studying Fullstack.NET development in september 2023.
+                                
+                                At the point of creat... </p>
+                                <a href="/portfolio.html#portfolio-warrior" class="button-more-info">Find out more
+                                    <span class="material-symbols-outlined">
+                                        open_in_new
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Console Blackjack-->
+                    <div class="card-object">
+                        <div class="card">
+                            <img src="./Images/Portfolio_images/ConsoleBlackJack.jpg" alt="Console Blackjack">
+                            <div class="card-content">
+                                <h2>Console Blackjack</h2>
+                                <p>A simple blackjack game made using the Deck of Cards API. You will be able to play alone against the dealer in a
+                                text-based blackjack game. Rules are simple, you get cards dealt and chooses when to stop, when to get more car... </p>
+                                <a href="/portfolio.html#portfolio-blackjack" class="button-more-info">Find out more
+                                    <span class="material-symbols-outlined">
+                                        open_in_new
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="./portfolio.html" class="btn">View my entire portfolio</a>
+                </div>
+            </section>
+
+            <!--Input some dividing artwork or something perhaps?-->
+            <div class="divider"></div>
+            
+            <article id="work-experience">
+                <h2 class="section-header-text">Work experience</h2>
+            
+                <div class="section-container">
+                    <div class="text-container">
+                        <p> I have been working in the world of retail telecom since 2018. 
+                            I began my journey at Elgiganten fresh out of High School as a sales person quickly taking on more responsibilities and becoming acting storemanager in Luleå.
+                            <br><br>
+                            Moving back home to Stockholm in a new team continuing my focus on the stores goals and a positive work enviroment. There I also became acting stormananger and later storemanager which I've been for the past 3 years.
+                            <br><br>
+                            Until now when I felt the need for a new challenge in the world of IT and webdevelopment.
                     </p>
-                
-                    <img src="./Images/Adrian/profile_picture.jpg" alt="Picture of Adrian">
-                </div>
-                
-                <a href="/hireme.html" class="hire-me-button-highlighted">Let's get in touch!</a>
-                <div class="divider"></div> <!--Added divider as a tag is absolute due to animations so section below clippes through it otherwise-->
-            </div>
-        </section>
-
-
-        <!--Input some dividing artwork or something perhaps?-->
-
-
-        <!--Section with portfolio - here's also the idea to show off some minor things and then a cta for the user
-        to go to (portfolio.html) where I show up some projects more in detail and write some more detailed info.
-        the section here in index however should be I'm thinking cards with images (perhaps like the html bootcamp thing)
-        but they should be horizontal or something and you should be able to "scroll" and click more info on it and it'll
-        take you to that location on the portfolio page (I think with using id you can make it like that) so it should
-        scroll down to that project on that page-->                                  
-        <section>
-            <h2 class="section-header-text">Recent work</h2>
-            <div class="card-container">
-                <!--Dreamify-->
-                <div class="card-object">
-                    <div class="card">
-                        <img src="/Images/Portfolio_images/Dreamify.jpg" alt="">
-                        <div class="card-content">
-                            <h2>Dreamify</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit ullam ea odio quidem illo quaerat dolor recusandae minus nemo aut sunt consequatur at officia rerum, voluptatum corrupti fugit aspernatur. Placeat omnis non deleniti. </p>
-                            <a href="/portfolio.html#portfolio-dreamify" class="button-more-info">Find out more
-                                <span class="material-symbols-outlined">
-                                    open_in_new
-                                </span>
-                            </a>
-                        </div>
                     </div>
-                </div>
-                <!--The Bank-->
-                <div class="card-object">
-                    <div class="card">
-                        <img src="/Images/Portfolio_images/The_Bank.jpg" alt="">
-                        <div class="card-content">
-                            <h2>"The Bank"</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit ullam ea odio quidem illo quaerat
-                                dolor recusandae minus nemo aut sunt consequatur at officia rerum, voluptatum corrupti fugit aspernatur.
-                                Placeat omnis non deleniti. </p>
-                            <a href="/portfolio.html#portfolio-bank" class="button-more-info">Find out more
-                                <span class="material-symbols-outlined">
-                                    open_in_new
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--Console Warrior-->
-                <div class="card-object">
-                    <div class="card">
-                        <img src="/Images/Portfolio_images/ConsoleWarrior_Stylized.webp" alt="">
-                        <div class="card-content">
-                            <h2>Console Warrior</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit ullam ea odio quidem illo quaerat
-                                dolor recusandae minus nemo aut sunt consequatur at officia rerum, voluptatum corrupti fugit aspernatur.
-                                Placeat omnis non deleniti. </p>
-                            <a href="/portfolio.html#portfolio-warrior" class="button-more-info">Find out more
-                                <span class="material-symbols-outlined">
-                                    open_in_new
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--Console Blackjack-->
-                <div class="card-object">
-                    <div class="card">
-                        <img src="/Images/Portfolio_images/ConsoleBlackJack.jpg" alt="">
-                        <div class="card-content">
-                            <h2>Console Blackjack</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit ullam ea odio quidem illo quaerat
-                                dolor recusandae minus nemo aut sunt consequatur at officia rerum, voluptatum corrupti fugit aspernatur.
-                                Placeat omnis non deleniti. </p>
-                            <a href="/portfolio.html#portfolio-blackjack" class="button-more-info">Find out more
-                                <span class="material-symbols-outlined">
-                                    open_in_new
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--Input some dividing artwork or something perhaps?-->
-        <div class="divider"></div>
-
-        <!--Section for CV - here it should just be a breif description of my work life and experience with a CTA button
-        that takes you to the (resume.html) page where it shows like my cv but in html/css. -->
-        <article>
-            <h2 class="section-header-text">Work experience</h2>
             
-            <div class="work-experience-container">
-                <div class="section-split-right">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat facere expedita repellat, optio corporis nobis,
-                    fugit pariatur nemo sed aut accusamus aliquam sapiente qui nesciunt suscipit vel. Soluta, consequatur dolorum minus
-                    ducimus beatae a tenetur inventore nam culpa delectus alias quo enim, ipsum atque cupiditate? Dolores nemo ullam
-                    velit aperiam. Modi inventore, quod molestias magnam rem voluptas veniam aut illum cumque aliquid totam accusantium
-                    nisi minus delectus, rerum distinctio, veritatis adipisci placeat tenetur amet tempore voluptatem. Eum ad rerum, nam
-                    dignissimos cumque cum quidem corrupti quasi expedita molestiae animi deleniti vitae officiis aut libero error ab
-                    tempora, accusantium neque unde.</p>
-                </div>
-                
-                <div class="section-img-and-button-container">
-                    <img src="https://picsum.photos/600/350" alt="">
-                    <a href="#" class="section-button">More details</a>
-                </div>
-                
-            </div>
-
-        </article>
-        
-
-        <div class="divider"></div>
-
-        <!--Section about me - breif info and a CTA button (on the right perhaps) that takes user to a more detailed
-        page (about.html) with more info of me ask chat gpt for fledging out the text. have some images of me in 
-        various settings, work, personal life, to show off certificate (bc trainee), other work related events,
-        paddlingen when we were outdoors etc etc-->
-        <section>
-            <h2 class="section-header-text">Who is Adrian?</h2>
+                    <div class="section-img-and-button-container">
+                        <img src="./Images/Adrian/adrian-section1.png" class="hoverable" alt="Picture of Adrian">
+                        <a href="./resume.html" class="btn section-button">My resumé</a>
+                    </div>
             
-            <div class="about-me-container"></div>
-                <div class="about-me-img-and-button-container">
-                    <img src="https://picsum.photos/600/350" alt="">
-                    <a href="#" class="about-me-button">More details</a>
                 </div>
             
-                <div class="about-me-p-container">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt id eaque eos? Dolorem labore possimus cupiditate aperiam ut, commodi molestias sequi aliquid. Ipsum accusamus quod a quam repellat totam nesciunt.</p>
+            </article>
+            
+            <!--Input some dividing artwork or something perhaps?-->
+            <div class="divider"></div>
+            
+            <article id="about-me">
+                <h2 class="section-header-text">Who is Adrian?</h2>
+            
+                <div class="section-container-no-background">
+                    <div class="section-img-and-button-container">
+                        <img src="./Images/Adrian/adrian-section2.png" class="hoverable" alt="Picture of Adrian">
+                        <a href="./about.html" class="btn section-button">Learn more</a>
+                    </div>
+                    <div class="text-container">
+                        <p>I am a 24 year old  ambitious and inquisitive person going from a successful career in retail management to Fullstack .NET
+                        development. 
+                        <br><br>
+                        Driven by a passion for continuous learning and professional growth. With a strong foundation in customer service, problem-solving, and team leadership, coupled with newly acquired skills in web
+                        development. 
+                        <br><br>
+                        Big fan of ice hockey and Formula 1, enjoys RPG video games and spontanious adventures with friends, love my cat Zigge.  </p>
+                    </div>
+                </div>
+            </article>
+            
+            
+            <!--Easter egg modal-->
+            <div id="easter-egg-modal" class="ee-modal">
+                <div class="ee-modal-content">
+                    <span id="ee-modal-close">&times;</span>
+                    <a href="https://www.youtube.com/watch?v=FTGW36YzZQI">Eliiiiite</a>
                 </div>
             </div>
-        </section>
 
 
-        <!--Put contact information, social media links and copyright information here-->
+            <div class="divider"></div> 
+        </main>
         <footer>
-
-        </footer>
+            <section class="img-links-container">
+                <div class="img-button-container">
+                    <img id="footer-logo" src="./Images/Logos/Personal_Logo.png" alt="Logo">
+                    <a href="/hireme.html" class="btn">Contact me</a>
+                </div>
         
-    </main>
+                <ul>
+                    <a href="https://github.com/Adrozs" target="_blank" class="social-link"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/adrozs/" target="_blank" class="social-link"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="mailto:adrozsahegyi@gmail.com" target="_blank" class="social-link"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </ul>
+            </section>
+        
+            <p id="copyright-text">© Copyright 2024 Adrian Rozsahegyi. All rights reserved.</p>
+        </footer>
+    </section>
+    <!-- <div class="footer-color-fade"></div> -->
 </body>
-
 </html>

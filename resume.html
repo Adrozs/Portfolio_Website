@@ -4,110 +4,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Adrian Rozsahegyi | Resumé</title>
     <link rel="stylesheet" href="general-style.css">
     <link rel="stylesheet" href="resume-style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script defer src="./script.js"></script>
 </head>
 
 <body>
     <div class="nav-color-fade"></div>
-    <div class="container">
-        <nav class="navbar">
-            <a href="index.html" class="nav-logo clickable"><img src="./Images/Logos/Personal_Logo.png"
-                    alt="Adrians Logo"></a>
-
-            <div class="nav-buttons">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="resume.html" class="active-page">Resumé</a>
-                <a href="hireme.html" class="hire-me-button">Get in touch!</a>
-            </div>
-        </nav>
-
-        <!--Content goes here-->
-        <h1 class="resume-header">Experience</h1>
+    <section class="container">
+        <section class="navbar">
+            <a href="./index.html" id="logo"> <img src="./Images/Logos/Personal_Logo.png" alt="Logo"></a>
+            <nav>
+                <input type="checkbox" id="nav-toggle">
+                <ul class="nav-menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./resume.html" class="active-page">Resumé</a></li>
+                    <li><a href="./hireme.html" id="hire-me-button">Get in touch!</a></li>
+                </ul>
+            </nav>
+            <span class="material-symbols-outlined" id="theme-toggle">light_mode</span>
         
-        <section class="content">
-            <div class="left">
-                <h2>Education</h2>
-                <div>
-                    <h3>Chas Academy</h3>
-                    <h5>2023-2025</h5>
-                    <h4>Fullstack .NET Developer</h4>
-                </div>
+            <!--Spacer to make sure nav-menu is centered and image at the far left-->
+            <div class="navbar-spacer"></div>
+        
+            <div class="hamburger-menu">
+                <label for="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+        
+        </section>
 
-                <div>
-                    <h3>MediaGymnasiet</h3>
-                    <h5>2015-2018</h5>
-                    <h4>Game Design</h4>
-                </div>
+        <header><h1 class="resume-header">Experience</h1></header>
+        
+        <main class="content">
+            <section class="education">
+                <h2>Education</h2>
+
+                <article class="info-container">
+                    <h3>Fullstack .NET Developer</h3>
+                    <div class="title-and-year-container">
+                        <h5>2023-2025</h5>
+                        <h4>Chas Academy</h4>
+                    </div>
+                    <p>
+                        Due to me deciding to begin studying to become a Fullstack .NET developer I went back to my sales role while
+                        being partly on educational leave.
+                    </p>
+                </article>
+
+                <article class="info-container">
+                    <h3>Media, Game Design</h3>
+                    <div class="title-and-year-container">
+                        <h5>2015-2018</h5>
+                        <h4>MediaGymnasiet</h4>
+                    </div>
+                    <p>
+                        Due to me deciding to begin studying to become a Fullstack .NET developer I went back to my sales role while
+                        being partly on educational leave.
+                    </p>
+                </article>
+
+                <div class="divider"></div>
 
                 <h2>Courses</h2>
-                <div>
+                <article class="info-container">
                     <h3>Emerging Leaders</h3>
-                    <h5>2023</h5>
-                    <h4>Elgiganten</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, est!</p>
-                </div>
-                
-                <div>
-                    <h3>CS50x | Introduction to Computer Science</h3>
-                    <h5>80% Complete</h5>
-                    <h4>Harvardx</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, est!</p>
-                </div>
-            </div>
-            <div class="right">
+                    <div class="title-and-year-container">
+                        <h5>2023</h5>
+                        <h4>Elgiganten</h4>
+                    </div>
+                    <p>
+                        Completed Elgigantens program for prospective managers.
+                    </p>
+                </article>
+
+                <article class="info-container">
+                    <h3>CS50x</h3>
+                    <p>73% Complete</p>
+                    <div class="title-and-year-container">
+                        <h5>Ongoing</h5>
+                        <h4>Harvardx</h4>
+                    </div>
+                    <p>
+                        Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.
+                    </p>
+                </article>
+            </section>
+            <section class="work">
                 <h2>Work experience</h2>
 
-                <div class="workplace-container">
+                <article class="info-container">
                     <h3>Elgiganten</h3>
                     <div class="title-and-year-container">
                         <h5>2023-Present</h5>
                         <h4>Sales Person</h4>
                     </div>
                     <p>
-                        Due to me deciding to begin studying to become a Fullstack .NET developer I went back to my sales role while being partly on educational leave. Working about 20% while studying.
+                        Due to me deciding to begin studying to become a Fullstack .NET developer I went back to my sales role while being partly on educational leave.
                     </p>
-                </div>
+                </article>
 
-                <div class="workplace-container">
-                    <h3>Elgiganten</h3>
-                    <h5>2021-2023</h5>
-                    <h4>Storemanager</h4>
+                <article class="info-container">
+                    <!-- <h3>Elgiganten</h3> -->
+                    <div class="title-and-year-container">
+                        <h5>2021-2023</h5>
+                        <h4>Storemanager</h4>
+                    </div>
                     <p>
                         For nearly 3 years I led a team of 5, fostering a collaborative and positive
                         work environment. Managed store profitability, budgets, scheduling, hiring,
                         and meetings. Oversaw inventory management, sales strategies, and
                         overall store operations.
                     </p>
-                </div>
+                </article>
 
-                <div class="workplace-container">
-                    <h3>Elgiganten</h3>
-                    <h5>2018-2021</h5>
-                    <h4>Sales Person/Acting Storemanager</h4>
+                <article class="info-container">
+                    <!-- <h3>Elgiganten</h3> -->
+                    <div class="title-and-year-container">
+                        <h5>2018-2021</h5>
+                        <h4>Sales Person/Acting Storemanager</h4>
+                    </div>
                     <p>
                         I started my career as a sales person specialing in the sale of phones and phone
                         subscriptions, providing customer service and handling
                         customer relations. Where i worked both independently and as part of a team,
                         contributing to and working towards the store's and
                         personal sales goals. <br>
-                        Between 2019-2021 I was acting storemanager on a few occations for several months when the ordinary manager was absent due to sick- and parental leave.
+                        Between 2019-2021 I was acting storemanager on a few occations for several months  at a time while the ordinary manager was absent due to sick- and parental leave.
                     </p>
+                </article>
+                    <a href="https://github.com/Adrozs" target="_blank" class="btn"><i class="fa-brands fa-linkedin"></i> View on LinkedIn</a>
+            </section>
+        </main>
+
+        <footer>
+            <div class="img-links-container">
+                <!--Längst till vänster bilden-->
+                <div class="img-button-container">
+                    <img id="footer-logo" src="./Images/Logos/Personal_Logo.png" alt="Logo">
+                    <a href="/hireme.html" class="btn">Contact me</a>
                 </div>
+
+                <!--Längst till höger mina sociala medierlänkar-->
+                <ul>
+                    <a href="https://github.com/Adrozs" target="_blank" class="social-link"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/adrozs/" target="_blank" class="social-link"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="mailto:adrozsahegyi@gmail.com" target="_blank" class="social-link"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </ul>
             </div>
 
 
-        </section>
 
 
-
-
-    </div>
+            <p id="copyright-text">© Copyright 2024 Adrian Rozsahegyi. All rights reserved.</p>
+        </footer>
+    </section>
 </body>
 
 </html>

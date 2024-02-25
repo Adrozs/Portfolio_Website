@@ -1,10 +1,38 @@
+:root {
+    /*Colors*/
+    --background-color: #191c1d;
+    --on-background-color: #e1e3e4;
+
+    --surface--color: #40484b;
+    --on-surface--color: #bfc8cc;
+
+    --outline-color: #899296;
+
+    --primary-color: #5ad5f9;
+    --on-primary-color: #003542;
+    --primary-container-color: #004e5f;
+    --on-primary-container-color: #b4ebff;
+
+    --secondary-color: #b3cad4;
+    --on-secondary-color: #1d333b;
+    --secondary-container-color: #344a52;
+    --on-secondary-container-color: #cee6f0;
+    --secondary-highlight-color: #cee6f0;
+
+    --teritary-color: #c2c4eb;
+    --on-teritary-color: #2b2e4d;
+    --teritary-container-color: #414465;
+    --on-teritary-container-color: #e0e0ff;
+    --teritary-highlight-container-color: #e4e4ff;
+}
+
 .about-me-header {
     margin-top: 5rem;
     margin-bottom: 8rem;
     text-align: center;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 70px;
-    color: #5ad5f9;
+    font-size: 5rem;
+    color: var(--primary-color);
 }
 
 .reverse-flex {
@@ -32,8 +60,8 @@
     font-size: 2rem;
     padding: 5%;
     /* border: 2px solid aqua; */
-    background-color: #004e5f;
-    color: #b4ebff;
+    background-color: var(--primary-container-color);
+    color: var(--on-primary-container-color);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
@@ -55,4 +83,92 @@
 .border-left-top {
     border-top-left-radius: 15vmin;
     border-bottom-left-radius: 5vmin;
+}
+
+/*Responsitivity*/
+
+@media (max-width: 1080px) {
+    .text-column {
+        font-size: 1.7rem;
+    }
+
+    .img-column img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 950px) {
+    .text-column {
+        font-size: 1.5rem;
+    }
+
+    .img-column img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 880px) {
+    .text-column {
+        font-size: 1.2rem;
+    }
+
+    .img-column img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 725px) {
+    .text-column {
+        font-size: 1rem;
+    }
+
+    .img-column img {
+        width: 170px;
+    }
+}
+
+@media (max-width: 690px) {
+    .about-me-header {
+        font-size: 3rem;
+    }
+    
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-column img {
+        width: 280px;
+        margin-bottom: 0.5rem;
+    }
+
+    .text-column {
+        font-size: 1rem;
+        padding: 3% 5%;
+        border-radius: 8vmin;
+        margin-bottom: 3rem;
+    }
+
+    .img-button-container .btn {
+        font-size: 1rem;
+    }
+
+    .img-column img {
+        height: 250px;
+        object-fit:cover;
+    }
+
+    footer .img-links-container .img-button-container .btn{
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    footer .social-link {
+        font-size: 1.5rem;
+    }
+
+    #copyright-text {
+    font-size: 0.6rem;
+    }
 }

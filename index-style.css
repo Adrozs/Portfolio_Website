@@ -2,47 +2,68 @@
 :root {
     /*for the animation*/
     /*number of items*/
-    --i: 8;
+    --i: 7;
     /*height of the container*/
     --h: 159;
 
     --speed: 3s;
+
+    /*Colors*/
+    --background-color: #191c1d;
+    --on-background-color: #e1e3e4;
+
+    --surface--color: #40484b;
+    --on-surface--color: #bfc8cc;
+
+    --outline-color: #899296;
+
+    --primary-color: #5ad5f9;
+    --on-primary-color: #003542;
+    --primary-container-color: #004e5f;
+    --on-primary-container-color: #b4ebff;
+
+    --secondary-color: #b3cad4;
+    --on-secondary-color: #1d333b;
+    --secondary-container-color: #344a52;
+    --on-secondary-container-color: #cee6f0;
+    --secondary-highlight-color: #cee6f0;
+
+    --teritary-color: #c2c4eb;
+    --on-teritary-color: #2b2e4d;
+    --teritary-container-color: #414465;
+    --on-teritary-container-color: #e0e0ff;
+    --teritary-highlight-container-color: #e4e4ff;
 }
 
 /*Hero section under nav bar and at top of screen*/
 .hero {
-    /* background-image: url("./Images/blue\ background.png"); */
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */ 
-    /* padding-top: 8rem;
-    padding-bottom: 8rem; */
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
 .my-name {
-    position: relative;
-    color: #5ad5f9;
+    color: var(--primary-color);
     font-family: 'Nunito Sans', sans-serif;
     font-size: 8rem;
     font-weight: 900;
-    /* border-bottom: 3px solid rgba(90, 212, 249, 0.3); */
+    margin-bottom: -2.8rem;
+    z-index: 1; /*to make it so the title scrolls under the name*/
 }
 
 .title {
-    color: #b3cad4;
+    color: var(--secondary-color);
     font-family: 'Roboto Mono', monospace;
-    font-size: 120px;
+    font-size: 7.5rem;
     font-weight: 700;
-    /* margin-left: 20px;*/
+    letter-spacing: -10px;
 }
 
-/*Animation*/
+/*Title scroll animation*/
 .animation-container {
     overflow: hidden;
     height: 155px;
@@ -88,18 +109,24 @@
 
 
 /*Introduction section*/
-.introduction .pic-and-text-container{
-    margin-top: 50px;
+.introduction {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.introduction .pic-and-text-container{
+    display: flex;
+    align-items: center;
 }
 
 .introduction .pic-and-text-container img{
-    width: 18vw;
+    width: 30%;
     height: auto;
-    border-radius: 50%;
-    margin-right: 2vw;
-    border: 7px dotted #5ad5f9;
+    padding: 2rem;
+    border-top-left-radius: 10vmin;
+    border-top-right-radius: 20vmin;
+    border-bottom-left-radius: 16vmin;
+    border-bottom-right-radius: 12vmin;
     transition-duration: 0.7s;
     transition-timing-function: ease;
 }
@@ -110,36 +137,22 @@
 }
 
 .introduction .pic-and-text-container p {
-    margin-top: 60px;
-    text-align: left;
-    font-size: 35px;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
 }
 
-/*Hover animation effect on my name - doesn't work correctly*/
-/* .pic-and-text-container span::before {
-    transform: scaleX(0);
-    transform-origin: bottom right;
 
+.introduction .pic-button-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.pic-and-text-container span:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.introduction .text-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.pic-and-text-container span::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    inset: 0 0 0 0;
-    background: #004e5f;
-    z-index: -1;
-    transition: transform .3s ease;
-} */
 
 .hire-me-button-highlighted{
     text-decoration: none;
@@ -148,10 +161,11 @@
     transition-timing-function: ease;
     font-size: 32px;
     padding: 16px;
+    text-align: center;
     border-radius: 3vmin;
     border: none;
-    background-color: #5ad4f9;
-    color: #003542;
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
 }
 
 .hire-me-button-highlighted:hover {
@@ -160,20 +174,31 @@
 
 .hire-me-button-highlighted:active {
     scale: 0.985;
-    background-color: #004e5f;
-    color: #b4ebff;
+    background-color: var(--primary-container-color);
+    color: var(--on-primary-container-color);
 }
 
 
 /*Recent work section*/
 /*Cards*/
+/*NOTE: Card colors are hard coded so they wont switch when changing to light mode*/
+.card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-section .btn {
+    display: flex;
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1280px;
     gap: 25px;
-    margin: auto;
+    margin-bottom: 1.5rem;
 }
 
 .card-object {
@@ -191,7 +216,8 @@
     cursor: pointer;
     position: relative;
     box-shadow: 0 10px 40px 5px rgba(0, 0, 0, 0.5);
-    
+    color: #e1e3e4;    
+    background-color:#191c1d;
 }
 
 /*Creates a shadow gradient effect at the bottom of the card to make the text easier to read*/
@@ -243,7 +269,7 @@
     inset: auto auto 40px 30px;
     color: inherit;
     text-decoration: none;
-    color: #a5a7a9;
+    color: #5ad5f9;
 }
 
 .card:hover h2 {
@@ -263,21 +289,54 @@
 }
 
 
-/*Icon for "new page" in the cards*/
-.material-symbols-outlined {
-    vertical-align:middle;
+
+
+
+/*Work experience & about me sections*/
+.section-container, .section-container-no-background {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.section-container {
+    border-radius: 3vmin;
+    background-color: var(--primary-container-color);
+    color: var(--on-primary-container-color);
+}
+
+.text-container {
+    width: 60%;
+}
+
+.section-container p, .section-container-no-background p {
+    display: flex;
+    align-self: flex-start;
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+}
+
+.reverse-flex {
+    flex-direction: row-reverse;
 }
 
 
-/*Work experience section*/
-.work-experience-container p {
-    font-size: 1.5rem;
+.section-img-and-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 
+.section-img-and-button-container img {
+    border-radius: 2vmin;
+    width: 100%;
+    object-fit: cover;
+}
 
-/*Structure*/
-.divider {
-    height: 250px;
+.section-button {
+    margin-top: 1rem;
 }
 
 .section-header-text {
@@ -291,18 +350,254 @@
     margin-top: 100px;
 }
 
-/*Text highlight classes*/
-.highlight-blue{
-    color: #003542;
-    background-color: #5ad5f9;
-    padding: 0 6px
-}
 
-.highlight-purple{
-    color: #c2c4eb;
+/*Text highlight classes*/
+.highlight-blue {
+    color: var(--primary-color);
     font-weight: 500;
     font-style: italic;
     padding: 0 6px
 }
 
-/*Hero animation*/
+.highlight-purple {
+    color: var(--teritary-color);
+    font-weight: 500;
+    font-style: italic;
+    padding: 0 6px
+}
+
+/* Responsivity */
+
+@media (max-width: 1100px) {
+    html {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 930px) {
+    html {
+            font-size: 0.8rem;
+    }
+
+    .title {
+        font-size: 7rem;
+    }
+
+    /*Hero*/
+    :root {
+        /*Change height of animation scroll*/
+        --h: 120;
+    }
+
+    .animation-container {
+        overflow: hidden;
+        height: 124px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    html {
+        font-size: 0.95rem;
+    }
+
+    /*Introduction*/
+    .my-name {
+        font-size: 5rem;
+        margin-bottom: -1.8rem;
+    }
+
+    .title {
+        font-size: 4rem;
+        letter-spacing: -7px;
+    }
+
+    /*Hero*/
+    :root {
+        /*Change height of animation scroll*/
+        --h: 80;
+    }
+
+    .animation-container {
+        overflow: hidden;
+        height: 79px;
+    }
+
+
+    /*About me and work experience*/
+    .section-container {
+        flex-direction: column;
+    }
+
+        
+    .section-container-no-background {
+        flex-direction: column-reverse;
+    }
+
+    .section-img-and-button-container {
+        width: 100%;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .introduction .pic-and-text-container {
+        flex-direction: column-reverse;
+    }
+
+    .introduction .pic-and-text-container img {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 656px) {
+    .card {
+        width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    /*Hero*/
+    :root {
+        /*Change height of animation scroll*/
+        --h: 59; 
+    }
+
+    .animation-container {
+        overflow: hidden;
+        height: 52px;
+    }
+
+    
+    .my-name {
+        font-size: 4rem;
+        margin-bottom: -1.45rem;
+    }
+
+    .title {
+        font-size: 3.8em;
+        letter-spacing: -3px;
+    }
+    
+    /*Introduction*/
+    .introduction a {
+        font-size: 2rem;
+    }
+
+    .introduction .pic-and-text-container img {
+        width: 80%;
+    }
+
+    /*Cards*/
+    .card-section a {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 280px;
+    }
+
+    html {
+        font-size: 0.7rem;
+    }
+
+    /*About me and work experience*/
+    .section-container, .section-container-no-background p{
+        padding: 0.8rem 0.;
+    }
+   
+    .section-img-and-button-container {
+        width: 100%;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    footer .img-links-container .img-button-container a {
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media (max-width: 480px) {
+
+    /*Hero*/
+    :root {
+        /*Change height of animation scroll*/
+        --h: 33;
+    }
+
+    .animation-container {
+        overflow: hidden;
+        height: 33px;
+    }
+
+
+    .my-name {
+        font-size: 2.5rem;
+        margin-bottom: -1rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+        letter-spacing: -3px;
+    }
+}
+
+@media print {
+
+    .my-name {
+        font-size: 4.2rem;
+        margin-bottom: -2rem;
+        margin-top: 1rem;
+    }
+
+    .title {
+        font-size: 4rem;
+        letter-spacing: -5px;
+    }
+
+    .card {
+        width: 40vw;
+        height: 30vh;
+    }
+
+    #work-experience {
+        margin-top: 20vh;
+        padding-top: 0.2vh;
+    }
+
+    #about-me {
+        padding-top: 0.2vh;
+    }
+
+    /* Stops the animation */
+    .animation-container,
+    .animation-container ul,
+    .animation-container ul li {
+        animation: none !important;
+        position: static !important;
+    }
+
+    /* Hide all list items initially */
+    .animation-container ul li {
+        display: none;
+    }
+
+    /* Only display the first item */
+    .animation-container ul li.title:first-child {
+        display: block !important;
+    }
+}
